@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    transition: 1s;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(#868686,rgb(88, 88, 88),#868686);
+    border-radius: 6px;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/*  */
+/*  INICIO ESTILOS ENCABEZADO NAVEGADOR */
+/*  */
+:root
+{
+    --facebook:#3b5999;
+}
+
+header
+{
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0 50px;
+    background: rgba(0, 0, 0, .3);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    transition: .5s;
+}
+    header .logo
+    {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    }  
+        header .logo img
+        {
+            height: 50px;
+            width: 50px;
+        }
+ 
+    header nav
+    {
+        flex: 5 1 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        filter: none;
+
+    }
+
+        header nav ul
+        {   
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+            
+                header nav ul.botones li 
+                {    
+                    list-style: none;
+                    
+                }
+
+ 
+                    header nav ul.botones li a
+                    {
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 20px;
+                        color: #fff;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                header nav ul.redes li 
+                {   
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    list-style: none;
+                    width: 40px;
+                    height: 0px;
+                    
+                
+                }
+ 
+                    header nav ul.redes li a
+                    {   
+                        display: block;
+                        color: #ffff;
+                        padding: 2px 8px;
+                        line-height: 30px;
+                        border-radius: 5px;
+                        font-size: 20px;
+                        box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+                        transition: .3s;
+                    } 
+         
+.menu-toogle
+    {
+        flex: 1 1 auto;
+        display: none;
+        float: right;
+        cursor: pointer;
+        line-height: 50px;
+        font-size: 30px;
+        color: white;
+        transition: 2s;
+    }
+
+/*  */
+/*  FIN ESTILOS ENCABEZADO NAVEGADOR */
+/*  */
+
+section
+{
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+    box-sizing: border-box;
+}  
+
+section:nth-child(odd){
+    background: rgb(82, 82, 82);
+}
+.circle
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.circle.circ1
+{   width: 400px;
+    height: 400px;
+    float: left;
+    border-radius: 80%;
+    margin: 20px;   
+    shape-outside: circle();
+}
+.texto{
+    text-align: justify;
+    color: #fff;
+}
+
+section.fondoo
+{
+    background: url(img/nuez.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+/*  */
+/*  INICIO HOVERS */
+/*  */
+header nav ul.redes:hover li a
+{
+ filter:blur(1.5px);
+}
+
+/* holaaaa */
+.chupala{
+background-color: aliceblue;
+}
+ 
+header nav ul.redes li a.face:hover
+{
+    background: var(--facebook);
+    filter:none !important;
+}
+ 
+header nav ul.redes li a.insta:hover
+{
+ background: #d6249f; 
+ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+ filter:none !important;
+}
+    
+header nav ul.botones li a:hover,
+header nav ul.botones li a.active
+{
+ color: #fff;
+ background: #2196f3;
+}
+ 
+header.black{
+    background: rgb(32, 32, 32);
+ padding: 0px 100px;
+ }
+ 
+ header.black .logo img{
+ height: 60px;
+ }
+ 
+ header.black nav ul.botones li a{
+     height: 60px;
+ }
+
+
+
+
+ /*  */
+/*  FIN HOVERS */
+/*  */
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+/*  */
+/*  INICIO MEDIA QUERY */
+/*  */
+ @media(max-width: 900px){
+        header{
+            display: flex;
+            padding: 0 30px;
+            transition: 0.5s;
+            
+        }
+    header nav 
+    {
+        position: absolute;
+        
+        height: 100vh;
+        width: 200px;
+        top: 60px;
+        flex-direction: column;
+        left: -100%;
+        background: #333;
+        transition: 0.7s;
+
+    }
+
+    HEADER NAV UL{
+        display: block;
+        width: 200px;
+    }
+
+    HEADER NAV UL.redes{
+        display: none;
+    }
+
+    HEADER NAV UL A{
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    header nav.coso{
+        left: 0;
+    
+    }
+
+
+        header .logo    
+        {
+            
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: left;
+            
+        }
+        .menu-toogle
+        {   
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .circle.circ1
+        {   width: 200px;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+        .texto{
+            font-size: 0.7em;
+            justify-content: center;
+            text-align: justify;
+        }
+     
+     .circle.circ1 img {width: 100%;}
+    }
+ 
+ 
+  
+ 
+ 
+ 
